@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            border: 2px black solid;
+            background-color: beige;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            
+            /* height: 450px;
+            width: 450px; */
+            padding: 2px;
+            margin:2px;
+        }
+
+        .box1 {
+            border: 1px rgb(184, 80, 80) solid;
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+
+            padding: 2px;
+            margin:2px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box2 {
+            border: 2px yellowgreen solid;
+            background-color: yellow;
+
+            height: 200px;
+            width: 200px;
+            padding: 2px;
+            margin:2px;
+        }
+        
+        img {
+            height: 200px;
+            width: 200px;
+        }
+
+        p{ 
+            background-color: azure;
+            border: 2px red solid;
+        }
+
+        /* if screen width is greater than 640px, then
+            image will be showed on the right side.
+           if screen width is smaller than 640px, then
+            image will be showed in bottom.
+        */
+        @media (max-width : 640px) {
+            .container{
+                flex-direction: column;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="box1">
+            <p> text1 </p>
+            <p> text2 </p>
+        </div>
+        
+        <div class="box2">
+            <img src="./img1.jpg" alt="image">
+        </div>
+        
+    </div>
+
+</body>
+</html>
