@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow</title>
+
+    <style>
+
+        :root {
+            --global-margin: 2px;
+            --global-padding: 2px;
+        }
+
+        .container {
+            background-color: beige;
+            height: 650px;
+            border: 2px solid black;
+
+            /* padding: 2px;
+            margin: 2px; */
+            
+            /* using root custom variable */
+            padding: var(--global-padding);
+            margin: var(--global-margin);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .box {
+            /* creating custom variables */
+            --custom-primary-color: brown;
+            --custom-width: 400px;
+
+
+            background-color: lightcyan;
+            /* border: 1px brown solid;     */
+            /* using cutom defined variable */
+            border: 1px var(--custom-primary-color) solid;    
+            
+            height: 400px;
+            /* width: 400px; */
+            /* using custom defined variable */
+            width: var(--custom-width);
+            
+            /* margin: 5px;
+            padding: 5px; */
+            margin: var(--global-margin);
+            padding: var(--global-padding);
+
+            /* normal box-shadow */
+            /* box-shadow: 10px 10px brown; */
+
+            /* multiple shadows */
+            /* box-shadow: 20px 0px 1px yellow, 40px 0px 1px brown; */
+            
+            /* shadow using blur-radius */
+            /* box-shadow: 10px 15px 50px brown; */
+
+            /* using spread-radius */
+            /* box-shadow: 10px 15px 25px 15px brown; */
+            
+            /* using inset */
+            /* box-shadow: inset 10px 15px 100px yellowgreen; */
+        }
+
+        #head1{ 
+            /* text-shadow: 2px 2px 2px gray; */
+            text-shadow: 2px 2px 2px red, 3px 3px 3px blue, 4px 4px 4px yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+
+
+        <div class="box">
+            <img src="img1.jpg"/>
+            <h1 id="head1">Welcome to infi</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat tempore reprehenderit molestias deserunt? Explicabo, iusto beatae! Repellendus labore dolorum tenetur qui sequi eius corporis suscipit.</p>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
