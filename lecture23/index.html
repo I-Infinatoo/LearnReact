@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: beige;
+            border: 5px black solid;
+        }
+
+        .box {
+            background-color: blue;
+            border-radius: 10px;
+            height: 80px;
+            width: 350px;
+            border: 3px solid yellow;
+            margin: 10px;
+
+            position: relative;
+
+            animation-name: rightMovement;
+            animation-duration: 5s;
+            /* animation-iteration-count: infinite; */
+            animation-iteration-count: infinite;
+            /* animation-delay: 2s; */
+
+            animation-fill-mode: both;
+
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+
+        /* this is used to define the configuration of styling */
+        @keyframes rightMovement {
+            from {
+                top: 0px;
+                left: 0px;
+            }
+            to {
+                top:0px;
+                left: 1420px;
+            }
+        }
+
+        .box2{
+            background-color: blue;
+            border-radius: 10px;
+            height: 80px;
+            width: 350px;
+            border: 3px solid yellow;
+            margin: 10px;
+
+            position: relative;
+
+            animation-name: leftMovement;
+            animation-duration: 5s;
+            /* animation-iteration-count: infinite; */
+            animation-iteration-count: infinite;
+            /* animation-delay: 2s; */
+
+            /* animation-fill-mode: both; */
+
+            animation-timing-function: ease-in;
+            animation-direction: alternate;
+        }
+
+        /* this is used to define the configuration of styling */
+        @keyframes leftMovement {
+            from {
+                top: 670px;
+                left: 1420px;
+            }
+            to {
+                top: 670px;
+                left: 0px;
+            }
+        }
+
+        #circle {
+            background-color: blue;
+            border-radius: 100px;
+            height: 100px;
+            width: 100px;
+            border: 3px solid yellow;
+            margin: 10px;
+
+            position: relative;
+            top: 30%;
+            left: 50%;
+
+            animation: 10s ease-in-out 0s infinite alternate-reverse none running circleMovement;
+        }
+
+        @keyframes circleMovement {
+            0% {
+                top: 1%;
+                left: 5%
+            }
+            30%{
+                top: 5%;
+                left: 90%
+            }
+            60% {
+                top: 65%;
+                left: 10%
+            }
+            100% {
+                top: 70%;
+                left: 90%
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+
+        </div>
+        
+        <div id="circle"></div>
+
+        <div class="box2">
+
+        </div>
+
+    </div>
+
+</body>
+</html>
