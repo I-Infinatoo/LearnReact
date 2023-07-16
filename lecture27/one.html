@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Card</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 400px;
+            height: 570px;
+            background-color: whitesmoke;
+            border-radius: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+
+            /* padding-left: 20px;
+            padding-bottom: 20px;
+            padding-right: 20px; */
+        }
+
+        .card img {
+            height: 30%;
+            width: 100%;
+
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+
+        .card h2 {
+            font-weight: bold;
+            margin: 0px 40px 0px 40px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            margin: 0px 50px 0px 50px;
+            text-align: center;
+        }
+
+        .card button {
+            
+            /* background-color: rgba(31, 31, 173, 0.831); */
+            background-color: #2c11d9;
+            /* background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%); */
+
+            font-size: large;
+            color: white;
+            height: 8%;
+            width: 70%;
+            border-radius: 7px;
+            box-shadow: 2px 2px 10px 2px #424adc;
+        }
+
+        .card a {
+            text-decoration: none;
+            font-weight: bold;
+            color:rgba(31, 31, 173, 0.831);
+            font-size: large;
+        } 
+
+        .innerBox {
+            display: flex;
+            /* justify-content: space-between; */
+            background-color: #8BC6EC;
+            height: 10%;
+            width: 70%;
+
+            border-radius: 8px;
+            align-items: center;
+        }
+
+        .leftBox {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 80%;
+            /* width: fit-content; */
+        }
+
+        .leftBox img {
+            margin: 4px;
+            height: 80%;
+            width:15%;
+        }
+
+        .leftBox p {
+            width: 70%;
+            height: 80%;
+
+            font-size: small;
+        }
+
+        .rightBox a {
+            font-size: medium;
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="card">
+
+            <img src="./images/image1.png" alt="top-image-card">
+
+            <h2>Order summary</h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, repudiandae sapiente!</p>
+
+            <div class="innerBox">
+                <div class="leftBox">
+                    <img src="./images/music.png" alt="music icon">              
+                    <p>Annual Plan</br>$99.0/year</p>
+                </div>
+                
+                <div class="rightBox">
+                    <a href="#">Change</a>
+                </div>
+            </div>
+
+            <button>Proceed To Payment</button>
+
+            <a href="#"> Cancel Order</a>
+        </div>
+    </div>
+
+</body>
+</html>
